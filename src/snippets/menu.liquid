@@ -1,8 +1,18 @@
-<section>
+<section class="menu">
     <ul>
         {% for link in linklists[section.settings.main_linklist].links %}
             <li>
                 <a href="{{link.url}}">{{link.title}}</a>
+
+                {% if link.links != blank %}
+                    <ul>
+                        {% for childlink in link.links %}
+                            <li>
+                               <a href="{{childlink.url}}">{{childlink.title}}</a>
+                            </li>
+                        {% endfor %}
+                     </ul>
+                {% endif %}
             </li>
         {% endfor %}
     </ul>

@@ -1,0 +1,40 @@
+@charset 'UTF-8';
+
+header {
+    display: flex;
+    background: grey;
+}
+
+.menu ul:first-child {
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+
+    li {
+        margin: 0 1em;
+
+        a {
+            text-decoration: none;
+
+        }
+
+
+        &:hover {
+            ul {
+                display: inline-block;
+            }
+        }
+
+        ul {
+            display: none;
+            position: absolute;
+            padding: 0;
+            list-style: none;
+            li {
+                margin: 0;
+            }
+        }
+
+      
+    }
+}
