@@ -1,0 +1,9 @@
+<section>
+    <ul>
+        {% for link in linklists[section.settings.main_linklist].links %}
+            <li>
+                <a href="{{link.url}}">{{link.title}}</a>
+            </li>
+        {% endfor %}
+    </ul>
+</section>

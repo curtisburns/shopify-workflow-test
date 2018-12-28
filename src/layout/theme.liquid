@@ -15,15 +15,31 @@
     <title>{{ page_title }} | {{ shop.name }}</title>
   {% endif %}
 
-  <meta name="description" content="">
+  {% if page_description %}
+    <meta name="description" content="{{ page_description }}" />
+  {% endif %}
+ 
+  {{ content_for_header }}
 
+  <link rel="canonical" href="{{ canonical_url }}" />
+  <meta name="viewport" content="width=device-width" />
+
+
+{% comment %} These don't seem to be working at the moment {% endcomment %}
   {% include 'style-tags', layout: 'theme' %}
   {% include 'script-tags', layout: 'theme' %}
 
-  {{ content_for_header }}
+
+
+
 </head>
 
 <body>
+
+ {% section 'header' %}
   {{ content_for_layout }}
+
 </body>
+
+
 </html>

@@ -19,7 +19,9 @@
   },
   "scripts": {
     "start": "slate-tools start",
+    "startdev": "slate-tools start --env=develop",
     "watch": "slate-tools start --skipFirstDeploy",
+    "watchdev": "slate-tools start --env=develop --skipFirstDeploy",
     "build": "slate-tools build",
     "deploy": "slate-tools build && slate-tools deploy",
     "zip": "slate-tools build && slate-tools zip"
